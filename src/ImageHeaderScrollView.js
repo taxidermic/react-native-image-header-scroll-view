@@ -35,6 +35,7 @@ export type Props = ScrollViewProps & {
   maxOverlayOpacity: number,
   minHeight: number,
   minOverlayOpacity: number,
+  getRef: (ref: any) => void,
   renderFixedForeground: () => React$Element<any>,
   renderForeground?: () => React$Element<any>,
   renderHeader: () => React$Element<any>,
@@ -58,7 +59,7 @@ export type DefaultProps = {
   minOverlayOpacity: number,
   renderFixedForeground: () => React$Element<any>,
   renderHeader: () => React$Element<any>,
-  ref: (ref: any) => void,
+  getRef: () => void,
   ScrollViewComponent: React$ComponentType<ScrollViewProps>,
   scrollViewBackgroundColor: string,
 };
@@ -96,7 +97,7 @@ class ImageHeaderScrollView extends Component<Props, State> {
       scrollY: new Animated.Value(0),
       pageY: 0,
     };
-    props.ref && props.ref(this.scrollViewRef);
+    props.getRef && props.getRef(this.scrollViewRef);
   }
 
   getChildContext() {
