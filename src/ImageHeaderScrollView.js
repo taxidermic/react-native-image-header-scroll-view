@@ -91,13 +91,17 @@ class ImageHeaderScrollView extends Component<Props, State> {
     scrollViewBackgroundColor: 'white',
   };
 
+
   constructor(props: Props) {
     super(props);
     this.state = {
       scrollY: new Animated.Value(0),
       pageY: 0,
     };
-    props.getRef && props.getRef(this.scrollViewRef);
+  }
+
+  componentDidMount() {
+    this.props.getRef && this.props.getRef(this.scrollViewRef);
   }
 
   getChildContext() {
