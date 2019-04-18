@@ -143,25 +143,3 @@ Results :
 | `disableHeaderGrow` | `bounces={false}` | 
 | ------------------- | ----------------- | 
 ![react-native-image-header-scroll-view demo disableHeaderGrow](./readmeAssets/demoDisableHeaderGrow.gif)|![react-native-image-header-scroll-view demo bounces](./readmeAssets/demoBounces.gif)
-
-
-## Contributing
-
-All contributions are welcomed, that might be either adding new features, doing some refaco of the exisiting code or fixing bugs. 
-
-**How to contribute**
-
-1. Fork the project & clone locally. Follow the initial setup here.
-2. Create a branch, naming it either a feature or bug: git checkout -b feature/that-new-feature or bug/fixing-that-bug
-3. Code and commit your changes. Write a good commit message. Best would be to use git [commitizen](https://github.com/commitizen/cz-cli)
-4. Test your changes in the [example repository](https://github.com/bamlab/react-native-image-header-scroll-view-example)
-5. Push to the branch: git push origin feature/that-new-feature
-6. Create a pull request for your branch 🎉
-
-
-## Other open-source modules by the folks at [BAM](http://github.com/bamlab)
-
- * [generator-rn-toolbox](https://github.com/bamlab/generator-rn-toolbox)
- * [react-native-image-resizer](https://github.com/bamlab/react-native-image-resizer)
- * [react-native-numberpicker-dialog](https://github.com/bamlab/react-native-numberpicker-dialog)
- * [react-native-animated-picker](https://github.com/bamlab/react-native-animated-picker)

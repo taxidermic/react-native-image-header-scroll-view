@@ -58,6 +58,7 @@ export type DefaultProps = {
   minOverlayOpacity: number,
   renderFixedForeground: () => React$Element<any>,
   renderHeader: () => React$Element<any>,
+  ref: (ref: any) => void,
   ScrollViewComponent: React$ComponentType<ScrollViewProps>,
   scrollViewBackgroundColor: string,
 };
@@ -95,6 +96,7 @@ class ImageHeaderScrollView extends Component<Props, State> {
       scrollY: new Animated.Value(0),
       pageY: 0,
     };
+    props.ref && props.ref(this.scrollViewRef);
   }
 
   getChildContext() {
@@ -295,8 +297,8 @@ class ImageHeaderScrollView extends Component<Props, State> {
           onScroll={
             useNativeDriver
               ? Animated.event([{ nativeEvent: { contentOffset: { y: this.state.scrollY } } }], {
-                  useNativeDriver: true,
-                })
+                useNativeDriver: true,
+              })
               : this.onScroll
           }
         />
